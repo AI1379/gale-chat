@@ -1,7 +1,8 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import TSXTest from './components/TSXTest';
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
     <img style="height:140px;" alt="Vue logo" src="./assets/vue.png" />
   </div>
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <TSXTest msg="TSX Msg"></TSXTest>
   <div class="static-public">
     Place static files into the <code>src/renderer/public</code> folder
     <img style="width:90px;" :src="'./images/node.png'" />

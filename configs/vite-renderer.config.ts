@@ -2,6 +2,8 @@ import { join } from 'path'
 import { builtinModules } from 'module'
 import { defineConfig, Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import styleImport from 'vite-plugin-style-import'
 import resolve from 'vite-plugin-resolve'
 import pkg from '../package.json'
 
@@ -11,6 +13,22 @@ export default defineConfig({
   root: join(__dirname, '../src/renderer'),
   plugins: [
     vue(),
+    vueJsx(),
+    styleImport({
+      libs: [
+        {
+          libraryName: "element-plus",
+          esModule: true,
+          ensureStyleFile: true,
+          resolveStyle: (name) => {
+            return `element-plus/theme-chalk/${name}.css`;
+          },
+          resolveComponent: (name) => {
+            return `element-plus/lib/${name}`;
+          },
+        }
+      ]
+    }),
     resolveElectron(
       /**
        * you can custom other module in here
@@ -22,7 +40,7 @@ export default defineConfig({
        */
     ),
   ],
-  base: './',
+  base: "./",
   build: {
     emptyOutDir: true,
     outDir: '../../dist/renderer',
@@ -31,6 +49,11 @@ export default defineConfig({
     host: pkg.env.HOST,
     port: pkg.env.PORT,
   },
+  resolve: {
+    alias: {
+      "@": join(__dirname, '../src'),
+    }
+  }
 })
 
 // ------- For use Electron, NodeJs in Renderer-process -------
