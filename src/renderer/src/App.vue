@@ -3,6 +3,7 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue';
 import TSXTest from './components/TSXTest';
+import ElementPlusTest from './components/ElementPlusTest.vue';
 </script>
 
 <template>
@@ -15,9 +16,10 @@ import TSXTest from './components/TSXTest';
   </div>
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <TSXTest msg="TSX Msg"></TSXTest>
+  <ElementPlusTest></ElementPlusTest>
   <div class="static-public">
     Place static files into the <code>src/renderer/public</code> folder
-    <img style="width:90px;" :src="'./images/node.png'" />
+    <img alt="nodejs" style="width:90px;" :src="'./images/node.png'" />
   </div>
 </template>
 

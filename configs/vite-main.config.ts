@@ -1,7 +1,7 @@
-import { join } from 'path'
-import { builtinModules } from 'module'
-import { defineConfig } from 'vite'
-import pkg from '../package.json'
+import { join } from 'path';
+import { builtinModules } from 'module';
+import { defineConfig } from 'vite';
+import pkg from '../package.json';
 
 export default defineConfig({
   mode: process.env.NODE_ENV,
@@ -27,7 +27,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": join(__dirname, '../src'),
-    }
-  }
-})
+      '@': join(__dirname, '../src'),
+    },
+  },
+});
