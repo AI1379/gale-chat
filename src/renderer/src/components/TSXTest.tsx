@@ -12,6 +12,6 @@ export default defineComponent({
     },
   },
   setup(props) {
-    return () => (<div> Test TSX Successfully<br />msg: {props.msg}</div>); // 写一个 hello world祭天
+    return () => (<div> Test TSX Successfully<br />msg: {props.msg}</div>);
   },
 });

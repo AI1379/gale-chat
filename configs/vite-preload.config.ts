@@ -25,9 +25,9 @@ export default defineConfig({
       },
     },
   },
-  resolve: {
-    alias: {
-      '@': join(__dirname, '../src'),
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     src: join(__dirname, '../src'),
+  //   },
+  // },
 });

@@ -13,7 +13,12 @@
     "lib": [
       "esnext",
       "dom"
-    ]
+    ],
+    "baseUrl": "../..",
+    "paths": {
+      "@/*": ["src/renderer/src/*"],
+      "assets/*": ["src/renderer/src/assets/*"]
+    }
   },
   "include": [
     "src/**/*.ts",

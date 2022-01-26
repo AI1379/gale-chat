@@ -134,7 +134,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': join(__dirname, '../src'),
+      '@': join(__dirname, '../src/renderer/src'),
+      assets: join(__dirname, '../src/renderer/src/assets'),
     },
   },
 });
